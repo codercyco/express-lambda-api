@@ -12,9 +12,9 @@ phases:
       - echo "Build completed"
   post_build:
     commands:
-      - aws lambda update-function-code --function-name lambda_s3_manual_deployment_function --zip-file fileb://lambda-package.zip
-      - sleep 10
-      - aws lambda update-function-configuration --function-name lambda_s3_manual_deployment_function --handler lambda.handler
+    - aws lambda update-function-code --function-name 2ug2-0590_lambda_code_build_function --zip-file fileb://lambda-package.zip
+    - sleep 10
+    - aws lambda update-function-configuration --function-name 2ug2-0590_lambda_code_build_function --handler lambda.handler
 
 artifacts:
   files:
